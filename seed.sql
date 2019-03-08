@@ -1,8 +1,10 @@
-CREATE DATABASE bank;
+CREATE USER IF NOT EXISTS roach;
+CREATE DATABASE IF NOT EXISTS bank;
+GRANT ALL ON DATABASE bank TO roach;
 
-CREATE TABLE bank.accounts (
+CREATE TABLE IF NOT EXISTS bank.accounts (
   id INT PRIMARY KEY,
   balance DECIMAL
 );
 
-INSERT INTO bank.accounts VALUES (1, 1000.50);`
+INSERT INTO bank.accounts VALUES (1, 1000);
