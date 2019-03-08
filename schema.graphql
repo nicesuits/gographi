@@ -19,6 +19,6 @@ input NewTodo {
   userId: String!
 }
 
-type mutation {
+type Mutation {
   createTodo(input: NewTodo!): Todo!
 }
