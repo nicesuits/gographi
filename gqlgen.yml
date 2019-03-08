@@ -1,10 +1,5 @@
-# .gqlgen.yml example
-#
-# Refer to https://gqlgen.com/config/
-# for detailed .gqlgen.yml documentation.
-
 schema:
-- schema.graphql
+  - schema.graphql
 exec:
   filename: generated.go
 model:
@@ -12,3 +7,6 @@ model:
 resolver:
   filename: resolver.go
   type: Resolver
+models:
+  Todo:
+    model: github.com/raion314/gographi.Todo
