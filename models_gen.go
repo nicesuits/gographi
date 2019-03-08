@@ -2,32 +2,23 @@
 
 package gographi
 
-type NewVideo struct {
-	Name        string `json:"name"`
-	Description string `json:"description"`
-	UserID      string `json:"userId"`
-	URL         string `json:"url"`
+type NewTodo struct {
+	Text   string `json:"text"`
+	UserID string `json:"userId"`
 }
 
-type Screenshot struct {
-	ID      string `json:"id"`
-	VideoID string `json:"videoId"`
-	URL     string `json:"url"`
+type Todo struct {
+	ID   string `json:"id"`
+	Text string `json:"text"`
+	Done bool   `json:"done"`
+	User User   `json:"user"`
 }
 
 type User struct {
-	ID    string `json:"id"`
-	Name  string `json:"name"`
-	Email string `json:"email"`
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }
 
-type Video struct {
-	ID          string        `json:"id"`
-	Name        string        `json:"name"`
-	Description string        `json:"description"`
-	User        User          `json:"user"`
-	URL         string        `json:"url"`
-	CreatedAt   Timestamp     `json:"createdAt"`
-	Screenshots []*Screenshot `json:"screenshots"`
-	Related     []Video       `json:"related"`
+type Mutation struct {
+	CreateTodo Todo `json:"createTodo"`
 }
